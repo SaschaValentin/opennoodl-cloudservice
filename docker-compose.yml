@@ -10,8 +10,8 @@ services:
     volumes:
       - mongodb-data:/data/noodlapp-db
     environment:
-      MONGO_INITDB_ROOT_USERNAME: yourusername
-      MONGO_INITDB_ROOT_PASSWORD: yourpassword
+      MONGO_INITDB_ROOT_USERNAME: db-admin
+      MONGO_INITDB_ROOT_PASSWORD: db-Sascha78parse
       MONGO_INITDB_DATABASE: noodlapp
 
   cloudservice:
@@ -25,8 +25,8 @@ services:
       PORT: 3000
       MASTER_KEY: mymasterkey
       APP_ID: myappid
-      DATABASE_URI: mongodb://yourusername:yourpassword@mongodb:27017/noodlapp?authSource=admin
-      PUBLIC_SERVER_URL: http://localhost:3000
+      DATABASE_URI: mongodb://db-admin:db-Sascha78parse@mongodb:27017/noodlapp?authSource=admin
+      PUBLIC_SERVER_URL: http://parse.mediacomvalentin.de:3000
     ports:
       - "3000:3000"
     links:
