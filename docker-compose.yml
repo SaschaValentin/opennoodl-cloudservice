@@ -6,7 +6,7 @@ services:
     image: mongo:latest
     container_name: noodlapp-mongodb
     ports:
-      - "27017:27017"
+      - "27217:27217"
     volumes:
       - mongodb-data:/data/noodlapp-db
     environment:
